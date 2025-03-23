@@ -1,0 +1,13 @@
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Credentials = "true"
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://16.171.177.148:3000/:splat"
+  status = 200
+  force = true
