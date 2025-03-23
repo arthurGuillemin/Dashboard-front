@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://16.171.177.148:3000/books';
+const API_URL = 'https://16.171.177.148:3000/books';
 
 class BookServices {
   getAllBooks() {
