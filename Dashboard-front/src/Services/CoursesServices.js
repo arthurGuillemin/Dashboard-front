@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL ="/api/courses";
+const API_BASE_URL = "http://16.171.177.148:3000/courses";
 
 class CoursesServices {
   getAllCourses() {
