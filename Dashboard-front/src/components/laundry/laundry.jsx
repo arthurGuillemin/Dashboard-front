@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./Laundry.module.css";
+import styles from "./laundry.module.css";
 
 const Laundry = () => {
   const [shouldWash, setShouldWash] = useState(false);
