@@ -1,5 +1,6 @@
 import ReadingList from "../ReadinList/ReadingList";
 import CoursesList from "../Courses/CoursesList";
+import MachineControl from "../laundry/laundry";
 import styles from './Dashboard.module.css';
 const Dashboard = () => {
   return (
@@ -9,6 +10,10 @@ const Dashboard = () => {
         <section>
           <h2>Liste de courses</h2>
           <CoursesList />
+        </section>
+        <section>
+          <h2>Machine a laver</h2>
+          <MachineControl />
         </section>
       </div>
     </div>
