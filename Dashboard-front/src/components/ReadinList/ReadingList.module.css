@@ -1,0 +1,49 @@
+/* Liste de lecture */
+.readinglist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Carte de livre */
+.bookcard {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bookcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bookcard h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bookcard p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Barre de progression */
+.progresscontainer {
+  height: 12px;
+  background: #f1f3f5;
+  border-radius: 6px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.progressbar {
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.4s ease;
+}

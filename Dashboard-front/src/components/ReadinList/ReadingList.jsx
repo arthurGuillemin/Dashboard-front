@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import BookServices from "../Services/BookServices";
-
+import BookServices from "../../Services/BookServices";
+import style from './ReadingList.module.css';
 const ReadingList = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -19,14 +19,14 @@ const ReadingList = () => {
   if (loading) return <p>Chargement des livres...</p>;
 
   return (
-    <div className="reading-list">
+    <div className={style.readinglist}>
       {books.map((book) => (
-        <div key={book.id} className="book-card">
+        <div key={book.id} className={style.bookcard}>
           <h2>{book.title}</h2>
           <p>Pages : {book.pages_nbr}</p>
-          <div className="progress-container">
+          <div className={style.progresscontainer}>
             <div
-              className="progress-bar"
+              className={style.progressbar}
               style={{ width: `${(book.progress / book.pages_nbr) * 100}%` }}
             ></div>
           </div>

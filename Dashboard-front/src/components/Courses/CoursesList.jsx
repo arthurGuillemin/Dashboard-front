@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import CoursesServices from "../Services/CoursesServices";
-
+import CoursesServices from "../../Services/CoursesServices";
+import styles from "./CoursesList.module.css";
 const CoursesList = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [newCourse, setNewCourse] = useState("");
 
-  // Fonction pour récupérer la liste des courses
   const fetchCourses = () => {
     setLoading(true);
     CoursesServices.getAllCourses()
@@ -21,7 +20,6 @@ const CoursesList = () => {
     fetchCourses();
   }, []);
 
-  // Ajouter un nouveau produit
   const handleAddCourse = (e) => {
     e.preventDefault();
     if (newCourse.trim() === "") return;
@@ -35,7 +33,6 @@ const CoursesList = () => {
       .catch((error) => console.error("Error creating course:", error));
   };
 
-  // Supprimer un produit
   const handleDeleteCourse = (courseId) => {
     CoursesServices.deleteCourse(courseId)
       .then(() => {
@@ -47,22 +44,22 @@ const CoursesList = () => {
   if (loading) return <p>Chargement des courses...</p>;
 
   return (
-    <div className="courses-section">
-      <form onSubmit={handleAddCourse} className="add-course-form">
+    <div className>
+      <form onSubmit={handleAddCourse} className={styles.addcourseform}>
         <input
           type="text"
           placeholder="Ajouter un produit"
           value={newCourse}
           onChange={(e) => setNewCourse(e.target.value)}
-          className="course-input"
+          className={styles.courseinput}
         />
-        <button type="submit" className="course-add-btn">
+        <button type="submit" className={styles.courseaddbtn}>
           Valider
         </button>
       </form>
-      <div className="courses-list">
+      <div className={styles.courseslist}>
         {courses.map((course) => (
-          <div key={course.id} className="course-card">
+          <div key={course.id} className={styles.coursecard}>
             <span>
               {course.item}
             </span>

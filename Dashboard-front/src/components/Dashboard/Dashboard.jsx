@@ -1,11 +1,11 @@
-import ReadingList from "./ReadingList";
-import CoursesList from "./CoursesList";
-
+import ReadingList from "../ReadinList/ReadingList";
+import CoursesList from "../Courses/CoursesList";
+import styles from './Dashboard.module.css';
 const Dashboard = () => {
   return (
-    <div className="dashboard">
+    <div className={styles.dashboard}>
       <h1>Dashboard</h1>
-      <div className="dashboard-sections">
+      <div className={styles.dashboardsections}>
         <section>
           <h2>Liste de lecture</h2>
           <ReadingList />
