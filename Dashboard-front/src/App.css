@@ -1,169 +1,51 @@
-/* Container principal du dashboard */
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-  min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* 🌍 Responsive Design pour mobile 📱 */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    padding: 20px;
+  }
 
-/* Titre principal du dashboard */
-.dashboard h1 {
-  font-size: 3rem;
-  color: #2f3e46;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
+  .dashboard h1 {
+    font-size: 2rem;
+  }
 
-/* Container des sections du dashboard */
-.dashboard-sections {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  width: 100%;
-  max-width: 1400px;
-}
+  .dashboardsections {
+    flex-direction: column; /* Afficher les sections en colonne */
+    gap: 20px;
+  }
 
-/* Style général des sections */
-section {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 320px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  section {
+    width: 100%;
+    padding: 20px;
+  }
 
-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
+  /* Input et bouton adaptés */
+  .courseinput {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 
-/* En-têtes de section */
-section h2 {
-  font-size: 1.8rem;
-  color: #2f3e46;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #4caf50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
+  .courseaddbtn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
 
-/* Liste de lecture */
-.reading-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+  /* Ajustement des cartes */
+  .coursecard, .bookcard {
+    width: 100%;
+    padding: 15px;
+  }
 
-/* Carte de livre */
-.book-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  /* Barre de progression plus fine */
+  .progresscontainer {
+    height: 8px;
+  }
 
-.book-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
+  .progressbar {
+    transition: width 0.3s ease;
+  }
 
-.book-card h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.book-card p {
-  margin: 5px 0;
-  color: #555;
-}
-
-/* Barre de progression */
-.progress-container {
-  height: 12px;
-  background: #f1f3f5;
-  border-radius: 6px;
-  margin: 12px 0;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background: #4caf50;
-  transition: width 0.4s ease;
-}
-
-/* Liste de courses */
-/* Formulaire d'ajout d'un produit */
-.add-course-form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  justify-content: center;
-}
-
-.course-input {
-  padding: 8px 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 250px;
-}
-
-.course-add-btn {
-  padding: 8px 16px;
-  font-size: 1rem;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.course-add-btn:hover {
-  background-color: #43a047;
-}
-
-/* Carte de course */
-.course-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.delete-btn {
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #e53935;
-  transition: color 0.3s ease;
-}
-
-.delete-btn:hover {
-  color: #ab000d;
+  /* Bouton de suppression plus petit */
+  .deletebtn {
+    font-size: 1rem;
+  }
 }
