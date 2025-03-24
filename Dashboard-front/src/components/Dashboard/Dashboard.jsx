@@ -7,9 +7,6 @@ const Dashboard = () => {
       <h1>Dashboard</h1>
       <div className={styles.dashboardsections}>
         <section>
-          <h2>Liste de lecture</h2>
-        </section>
-        <section>
           <h2>Liste de courses</h2>
           <CoursesList />
         </section>
