@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://16.171.177.148/books';
+const API_URL = 'https://dashboard-back-9yvd.onrender.com//books';
 
 class BookServices {
   getAllBooks() {
